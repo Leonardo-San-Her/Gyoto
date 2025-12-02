@@ -1,0 +1,14 @@
+{
+  "name": "Gyoto Codespace",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "cd /workspaces/Gyoto && ./configure --without-mpi && make -j$(nproc) && sudo make install",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
