@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Scenery>
+  <!-- Kerr metric in Boyer–Lindquist coordinates with spin a = 0.99 -->
+  <Metric kind="KerrBL">
+    <Spin>
+      0.99
+    </Spin>
+  </Metric>
+
+  <!-- Screen: posición del observador y resolución -->
+  <Screen>
+    <!-- (t, r, theta, phi) en unidades geométricas, ángulos en radianes -->
+    <!-- t = 1000 (irrelevante físicamente aquí), r = 50 M, theta ≃ 80° -->
+    <Position>
+      1000.
+      50.
+      1.3962634
+      0.
+    </Position>
+
+    <Time unit="geometrical_time">
+      1000.
+    </Time>
+
+    <!-- Campo de visión más pequeño para hacer zoom sobre la sombra (~11.5°) -->
+    <FieldOfView>
+      0.2
+    </FieldOfView>
+
+    <!-- Más resolución para ver bien la forma de la sombra -->
+    <Resolution>
+      512
+    </Resolution>
+  </Screen>
+
+  <!-- Disco fino tipo Page–Thorne alrededor del agujero de Kerr -->
+  <Astrobj kind="PageThorneDisk">
+    <!-- Radios en unidades geométricas M -->
+    <InnerRadius>
+      2.0
+    </InnerRadius>
+    <OuterRadius>
+      30.0
+    </OuterRadius>
+  </Astrobj>
+</Scenery>
